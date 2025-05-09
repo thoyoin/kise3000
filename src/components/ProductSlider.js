@@ -41,7 +41,7 @@ const ProductSlider = () => {
             pagination={{ clickable: true }}
             spaceBetween={50}
             slidesPerView={1}
-            speed={1100}
+            speed={800}
           >
             {products.map((product, index) => (
             <SwiperSlide key={index}>
