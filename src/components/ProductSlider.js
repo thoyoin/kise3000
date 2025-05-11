@@ -51,7 +51,7 @@ const ProductSlider = () => {
                 </div>
             </SwiperSlide>
             ))}
-            <a href='#'><button className="main__btn" >ОФОРМИТЬ ЗАКАЗ</button></a>
+            <a href='https://t.me/drainmp3' target='blank'><button className="main__btn" >ОФОРМИТЬ ЗАКАЗ</button></a>
           </Swiper>
       </div>
     );

@@ -50,9 +50,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
         }
         .branding2 {
             color: white;
-            letter-spacing: -4%;
+            letter-spacing: 4%;
             font-size: 16px;
             cursor: default;
+            font-weight:lighter;
         }
         .dropdown__wrapper {
             position: absolute;

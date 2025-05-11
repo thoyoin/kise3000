@@ -32,12 +32,12 @@ const Header = () => {
             <header className="header">
                 <p className='menu__button' onClick={ toggleMenu } style={{cursor: 'pointer'}}><IoIosMenu className="menu__icon" size={35} color="white"/></p>
                 <p className="branding1">ИСКУССТВО ЖИТЬ</p>
-                <p className="branding2"><b>angel.</b><br/>&nbsp;&nbsp;&nbsp;даст</p>
+                <p className="branding2">angel.<br/>&nbsp;&nbsp;даст</p>
                 {isMenuOpen && (
                     <div className="dropdown__wrapper" ref={menuRef}>
                         <nav className="dropdown__menu">
-                            <a href="#"> - INSTAGRAM</a>
-                            <a href="#"> - TELEGRAM</a>
+                            <a href="https://www.instagram.com/angeldust.by?igsh=MTl5dTEydDE5ZHVxbw%3D%3D&utm_source=qr" target="blank"> - INSTAGRAM</a>
+                            <a href="https://t.me/drainmp3" target="blank"> - TELEGRAM</a>
                             <p>СЛЕДИ ЗА ОБНОВЛЕНИЯМИ</p>
                         </nav>
                     </div>
