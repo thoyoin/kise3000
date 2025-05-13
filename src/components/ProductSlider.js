@@ -12,7 +12,7 @@ const ProductSlider = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:1337/api/products?populate=*')
+        fetch('https://committed-nurture-5f052329ed.strapiapp.com/api/products?populate=*')
           .then(res => res.json())
           .then(data => {setProducts(data.data);})
           .catch(err => console.error('Ошибка загрузки продуктов:', err));
