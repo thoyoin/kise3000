@@ -1,7 +1,5 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { IoIosMenu } from "react-icons/io";
-import { useEffect } from "react";
-import { useRef } from "react";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
