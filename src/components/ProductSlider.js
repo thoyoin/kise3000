@@ -17,7 +17,6 @@ const ProductSlider = () => {
           .then(data => {setProducts(data.data);})
           .catch(err => console.error('Ошибка загрузки продуктов:', err));
     }, []);
-
     return (
         <div className='product-slider'>
             <Swiper
@@ -36,7 +35,7 @@ const ProductSlider = () => {
                     <SwiperSlide key={product.id}>
                     <div className="product-slide">
                         <img
-                            src={`http://localhost:1337${imageUrl}`}
+                            src={`https://committed-nurture-5f052329ed.strapiapp.com${imageUrl}`}
                             alt={product.Title}
                             className="product-image"
                         />

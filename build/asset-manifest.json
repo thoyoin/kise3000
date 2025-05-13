@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/kise3000/static/css/main.ee833dc0.css",
-    "main.js": "/kise3000/static/js/main.3ec0efe8.js",
+    "main.js": "/kise3000/static/js/main.9d8d63ba.js",
     "static/media/фон_main.png": "/kise3000/static/media/фон_main.9e4fb7e6a1a1756149a2.png",
     "index.html": "/kise3000/index.html",
     "main.ee833dc0.css.map": "/kise3000/static/css/main.ee833dc0.css.map",
-    "main.3ec0efe8.js.map": "/kise3000/static/js/main.3ec0efe8.js.map"
+    "main.9d8d63ba.js.map": "/kise3000/static/js/main.9d8d63ba.js.map"
   },
   "entrypoints": [
     "static/css/main.ee833dc0.css",
-    "static/js/main.3ec0efe8.js"
+    "static/js/main.9d8d63ba.js"
   ]
 }
