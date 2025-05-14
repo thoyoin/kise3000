@@ -30,12 +30,11 @@ const ProductSlider = () => {
             {products.map((product) => {
                 if (!product || !product.Image || product.Image.length === 0) return null;
                 const imageUrl = product.Image[0].url;
-
                 return (
                     <SwiperSlide key={product.id}>
                     <div className="product-slide">
                         <img
-                            src={`https://committed-nurture-5f052329ed.strapiapp.com${imageUrl}`}
+                            src={imageUrl}
                             alt={product.Title}
                             className="product-image"
                         />
