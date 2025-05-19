@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { supabase } from '../supabaseClient';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -12,10 +13,19 @@ const ProductSlider = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('https://committed-nurture-5f052329ed.strapiapp.com/api/products?populate=*')
-          .then(res => res.json())
-          .then(data => {setProducts(data.data);})
-          .catch(err => console.error('Ошибка загрузки продуктов:', err));
+        async function fetchProducts() {
+            const { data, error } = await supabase
+                .from('products')
+                .select('*');
+
+            if (error) {
+                console.error('Ошибка загрузки продуктов:', error);
+            } else {
+                setProducts(data);
+            }
+        }
+
+        fetchProducts();
     }, []);
     return (
         <div className='product-slider'>
@@ -28,17 +38,17 @@ const ProductSlider = () => {
                 speed={800}
             >
             {products.map((product) => {
-                if (!product || !product.Image || product.Image.length === 0) return null;
-                const imageUrl = product.Image[0].url;
+                if (!product || !product.image_url) return null;
+                const imageUrl = product.image_url;
                 return (
                     <SwiperSlide key={product.id}>
                     <div className="product-slide">
                         <img
                             src={imageUrl}
-                            alt={product.Title}
+                            alt={product.title}
                             className="product-image"
                         />
-                        <div className="product-title">{product.Title}</div>
+                        <div className="product-title">{product.title}</div>
                     </div>
                     </SwiperSlide>
                 );
