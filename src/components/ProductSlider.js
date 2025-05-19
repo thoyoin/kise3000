@@ -29,6 +29,7 @@ const ProductSlider = () => {
     }, []);
     return (
         <div className='product-slider'>
+            {products.length === 0 && <div>Нет доступных продуктов.</div>}
             <Swiper
                 navigation
                 modules={[Navigation, Pagination]}
